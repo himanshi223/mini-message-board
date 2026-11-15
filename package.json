@@ -1,0 +1,25 @@
+{
+  "name": "mini-message-board",
+  "version": "1.0.0",
+  "description": "A message board to add and display messages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/himanshi223/mini-message-board.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/himanshi223/mini-message-board/issues"
+  },
+  "homepage": "https://github.com/himanshi223/mini-message-board#readme",
+  "dependencies": {
+    "ejs": "^7.0.2",
+    "express": "^5.3.0"
+  }
+}
