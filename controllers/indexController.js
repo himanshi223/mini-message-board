@@ -1,6 +1,13 @@
 import { getMessageById } from "../db.js";
+import { getMessages } from "../db.js";
 
-function getMsgById(req, res){
+const messages = getMessages();
+
+const displayMessages = (req, res)=>{
+    res.render("index", {title: "Messages", messages});
+}
+
+const getMsgById = (req, res)=>{
     const { msgId } = req.params;
     const message = getMessageById(msgId);
     if(!message)
@@ -8,4 +15,4 @@ function getMsgById(req, res){
     res.render("message-details", {message});
 }
 
-export {getMsgById}
+export { displayMessages, getMsgById }
