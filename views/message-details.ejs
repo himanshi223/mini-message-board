@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h1><%= message.text %></h1>
-    <p>By: <%= message.user %></p>
-    <p>On: <%= message.added %></p>
+    <h1>Message Details</h1>
+    <h2><%= message.text %></h2>
+    <p class="details name">By <%= message.user %></p>
+    <p class="details">On: <%= message.added %></p>
 </body>
 </html>

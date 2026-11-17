@@ -16,9 +16,12 @@ body {
 }
 
 h1 {
-  padding: 20px;
-  text-align: center;
   font-size: 3rem;
+  padding: 20px;
+}
+
+h1,h2{
+  text-align: center;
 }
 
 ul {
@@ -27,14 +30,16 @@ ul {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  list-style: none;
 }
 
 .msg-container {
   padding: 30px 10px;
-  width: 40%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 20%;
   border: 1px solid rgb(226, 160, 160);
   background-color: rgb(241, 227, 230);
@@ -42,10 +47,6 @@ ul {
 
 .msg {
   font-size: 1.5rem;
-}
-
-.user {
-  text-align: right;
 }
 
 .new,
@@ -113,5 +114,13 @@ input {
 }
 
 input {
-    background-color: rgb(253, 229, 241);
+  background-color: rgb(253, 229, 241);
+}
+
+.details {
+  text-align: center;
+}
+
+.details.name{
+  font-size: 1.5rem;
 }
