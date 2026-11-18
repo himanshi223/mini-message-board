@@ -1,17 +1,13 @@
-import { addMessage } from "../db.js";
-
+import {insertMessage} from "../db/queries.js";
 
 const formGet = (req, res)=>{
     res.render("form");
 }
 
 const saveMessage = (req, res)=>{
-    const text = req.body.message;
-    const user = req.body.user;
-    const added = new Date();
-
-    addMessage({text, user, added});
-
+    const message = req.body.message;
+    const user = req.body.user; 
+    insertMessage(message, user);
     res.redirect("/");
 }
 

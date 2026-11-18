@@ -1,18 +1,16 @@
-import { getMessageById } from "../db.js";
-import { getMessages } from "../db.js";
+import { getAllMessages, getMessageById } from "../db/queries.js";
 
-const messages = getMessages();
 
-const displayMessages = (req, res)=>{
+const displayMessages = async(req, res)=>{
+    const messages = await getAllMessages();
     res.render("index", {title: "Messages", messages});
 }
 
-const getMsgById = (req, res)=>{
+const getMsgById = async(req, res)=>{
     const { msgId } = req.params;
-    const message = getMessageById(msgId);
-    if(!message)
-        res.status(404).send("Cannot find this message")
-    res.render("message-details", {message});
+    const message = await getMessageById(msgId);
+    if(!message) res.status(404).render("error", {error: "Cannot find the message you are looking for"});
+    else res.render("message-details", {message});
 }
 
 export { displayMessages, getMsgById }

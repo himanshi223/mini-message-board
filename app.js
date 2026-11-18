@@ -20,7 +20,7 @@ app.use("/new", newMsgRouter);
 
 app.use((err, req, res, next)=>{
     console.error(err);
-    res.status(500).send("Internal Server Error");
+    res.status(500).render("error", {error: "internal server error occured"})
 })
 
 app.listen(PORT, (error)=>{
