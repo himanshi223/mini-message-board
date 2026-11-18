@@ -124,3 +124,8 @@ input {
 .details.name{
   font-size: 1.5rem;
 }
+
+.error {
+  color: rgb(52, 2, 2);
+  text-align: center;
+}

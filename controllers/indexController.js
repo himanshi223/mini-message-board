@@ -3,6 +3,7 @@ import { getAllMessages, getMessageById } from "../db/queries.js";
 
 const displayMessages = async(req, res)=>{
     const messages = await getAllMessages();
+    if(!messages) return res.status(500).render("error", {error: "Internal Server Error"});
     res.render("index", {title: "Messages", messages});
 }
 
