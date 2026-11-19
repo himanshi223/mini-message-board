@@ -129,3 +129,22 @@ input {
   color: rgb(52, 2, 2);
   text-align: center;
 }
+
+@media (max-width: 600px){
+  :root{
+    font-size: 14px;
+  }
+  .msg-container{
+    width: 80%;
+  }
+  .new{
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  form{
+    margin: 0;
+  }
+  input{
+    width: 200px;
+  }
+}
